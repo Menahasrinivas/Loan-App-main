@@ -74,7 +74,7 @@ const HomePage = () => {
       try {
         const user = JSON.parse(localStorage.getItem("user"));
         setLoading(true);
-        const res = await axios.post("/transactions/get-transaction", {
+        const res = await axios.post("https://loan-app-main.onrender.com/transactions/get-transaction", {
           userid: user._id,
           frequency,
           selectedDate,
@@ -96,7 +96,7 @@ const HomePage = () => {
       const user = JSON.parse(localStorage.getItem("user"));
       setLoading(true);
       if (editable) {
-        await axios.post("/transactions/edit-transaction", {
+        await axios.post("https://loan-app-main.onrender.com/transactions/edit-transaction", {
           payload: { ...values, userId: user._id, image: imagePreview },
           transactionId: editable._id,
         });
@@ -123,7 +123,7 @@ const HomePage = () => {
   const handleDelete = async () => {
     try {
       setLoading(true);
-      await axios.post("/transactions/delete-transaction", {
+      await axios.post("https://loan-app-main.onrender.com/transactions/delete-transaction", {
         transactionId: recordToDelete._id,
       });
       setLoading(false);
