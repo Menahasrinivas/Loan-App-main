@@ -103,7 +103,7 @@ const HomePage = () => {
         setLoading(false);
         message.success("Loan Transaction Details Updated Successfully");
       } else {
-        await axios.post("/transactions/add-transaction", {
+        await axios.post("https://loan-app-main.onrender.com/transactions/add-transaction", {
           ...values,
           userid: user._id,
           image: imagePreview,
