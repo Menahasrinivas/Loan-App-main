@@ -1,0 +1,30 @@
+.your-class {
+              font-size: 18px;
+              padding: 30px;
+            }
+/* Mobile phones (portrait and landscape) */
+@media (max-width: 599px) {
+              .your-class {
+                font-size: 14px;
+                padding: 10px;
+              }
+            }
+            
+            /* Tablets (portrait and landscape) */
+            @media (min-width: 600px) and (max-width: 1199px) {
+              .your-class {
+                font-size: 16px;
+                padding: 20px;
+              }
+            }
+            
+            /* Desktop and larger screens */
+            @media (min-width: 1200px) {
+              .your-class {
+                font-size: 18px;
+                padding: 30px;
+              }
+            }
+            .full-height {
+              height: 100vh; /* Full viewport height */
+            }
